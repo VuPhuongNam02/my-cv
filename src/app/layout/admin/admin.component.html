@@ -1,0 +1,85 @@
+<input type="checkbox" id="sidebar-toggle" />
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h3 class="brand">
+            <span class="ti-unlink"></span>
+            <span>easywire</span>
+        </h3>
+        <label for="sidebar-toggle" class="ti-menu-alt"></label>
+    </div>
+
+    <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a [routerLink]="['/admin']">
+                    <span class="ti-home"></span>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['./profile']">
+                    <span class="ti-home"></span>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['./skills']">
+                    <span class="ti-agenda"></span>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['./schools']">
+                    <span class="ti-clipboard"></span>
+                    <span>Schools</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['./projects']">
+                    <span class="ti-folder"></span>
+                    <span>Projects</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-content">
+    <header>
+        <div class="search-wrapper">
+            <span class="ti-search"></span>
+            <input type="search" placeholder="Search" />
+        </div>
+
+        <div class="social-icons">
+            <span class="ti-bell"></span>
+            <span class="ti-comment"></span>
+            <div></div>
+        </div>
+    </header>
+
+    <main>
+        <router-outlet></router-outlet>
+        <!-- <section class="recent">
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <h3>Recent activity</h3>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Team</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+</div>

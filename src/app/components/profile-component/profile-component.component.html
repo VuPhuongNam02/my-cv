@@ -1,0 +1,27 @@
+<div class="user-top">
+    <div class="avatar">
+        <img [src]="profile.avatar" alt="" />
+    </div>
+    <div class="userinfo">
+        <div class="top">
+            <div class="name">
+                <span class="featured">{{ profile.name }}</span>
+            </div>
+            <div class="post">{{ profile.desiredJob }}</div>
+        </div>
+        <div class="info">
+            <div class="li">
+                <span class="-ap icon-briefcase2 icon"></span> {{ profile.birthday }}
+            </div>
+            <div class="li">
+                <span class="-ap icon-phone5 icon"></span> {{ profile.phone }}
+            </div>
+            <div class="li">
+                <span class="-ap icon-mail icon"></span>{{ profile.email }}
+            </div>
+            <a [href]="profile.facebook">
+                <span class="-ap icon-place icon"></span> {{ profile.facebook }}
+            </a>
+        </div>
+    </div>
+</div>

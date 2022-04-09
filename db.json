@@ -1,0 +1,36 @@
+{
+  "profile": {
+    "name": "Vu Phuong Nam",
+    "avatar": "https://avatars.githubusercontent.com/u/88828699?v=4",
+    "birthday": "25/12/2002",
+    "phone": "84 - 363861429",
+    "email": "vuphuongnam25122002@gmail.com",
+    "facebook": "https://www.facebook.com/vu.phuongnam.02",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "desiredJob": "FrontEnd Developers"
+  },
+  "skills": [
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "avatar": "https://avatars.githubusercontent.com/u/88828699?v=4"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Casebot",
+      "time_start": "1/1/2021",
+      "time_end": "2/2/2021",
+      "description": ""
+    }
+  ],
+  "schools": [
+    {
+      "id": 1,
+      "name": "Fpoly",
+      "time_start": "1/1/2021",
+      "time_end": "2/2/2021"
+    }
+  ]
+}
