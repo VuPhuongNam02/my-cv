@@ -1,40 +1,49 @@
-<form [formGroup]="profileForm" (submit)="submit(profile)">
-    <p>
-        <label>Name</label>
-        <input type="text" formControlName="name" [(ngModel)]="profile.name" class="form-control" />
-    </p>
-    <p>
-        <label>Avatar</label>
-        <input type="text" formControlName="avatar" [(ngModel)]="profile.avatar" class="form-control" />
-    </p>
-    <p>
-        <label>Birthday</label>
-        <input type="date" formControlName="birthday" [(ngModel)]="profile.birthday" class="form-control" />
-    </p>
-    <p>
-        <label>Phone</label>
-        <input type="text" formControlName="phone" [(ngModel)]="profile.phone" class="form-control" />
-    </p>
-    <p>
-        <label>Email</label>
-        <input type="email" formControlName="email" [(ngModel)]="profile.email" class="form-control" />
-    </p>
-    <p>
-        <label>Facebook</label>
-        <input type="text" formControlName="facebook" [(ngModel)]="profile.facebook" class="form-control" />
-    </p>
-    <p>
-        <label>Desired Job</label>
-        <input type="text" formControlName="desiredJob" [(ngModel)]="profile.desiredJob" class="form-control" />
-    </p>
-    <p>
-        <label>Description</label>
-        <textarea name="" id="" cols="30" rows="10" formControlName="description" [(ngModel)]="profile.description"></textarea>
-    </p>
-    <p>
-        <button type="submit">submit</button>
-    </p>
-</form>
-<p>
-    <button>edit profile</button>
-</p>
+<div class="row" readonly>
+    <div class="col-md-8">
+        <form [formGroup]="profileForm" (submit)="submit(profile)">
+            <p>
+                <label>Name</label>
+                <input type="text" formControlName="name" [(ngModel)]="profile.name" class="form-control" />
+            </p>
+            <p>
+                <label>Avatar</label>
+                <input type="text" formControlName="avatar" [(ngModel)]="profile.avatar" class="form-control" />
+            </p>
+            <p>
+                <label>Birthday</label>
+                <input type="date" formControlName="birthday" [(ngModel)]="profile.birthday" class="form-control" />
+            </p>
+            <p>
+                <label>Phone</label>
+                <input type="text" formControlName="phone" [(ngModel)]="profile.phone" class="form-control" />
+            </p>
+            <p>
+                <label>Email</label>
+                <input type="email" formControlName="email" [(ngModel)]="profile.email" class="form-control" />
+            </p>
+            <p>
+                <label>Facebook</label>
+                <input type="text" formControlName="facebook" [(ngModel)]="profile.facebook" class="form-control" />
+            </p>
+            <p>
+                <label>Desired Job</label>
+                <input type="text" formControlName="desiredJob" [(ngModel)]="profile.desiredJob" class="form-control" />
+            </p>
+            <p>
+                <label>Description</label>
+                <textarea class="form-control" formControlName="description" [(ngModel)]="profile.description"></textarea>
+            </p>
+            <p *ngIf="isEdit">
+                <button class="btn btn-success" type="submit">submit</button>
+                <button class="btn btn-danger" (click)="handleCancel('cancel')">
+          cancel
+        </button>
+            </p>
+        </form>
+        <p *ngIf="!isEdit">
+            <button class="btn btn-warning" (click)="unDisabled('click')">
+        Click to Edit profile
+      </button>
+        </p>
+    </div>
+</div>
