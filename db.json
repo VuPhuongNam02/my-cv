@@ -34,11 +34,11 @@
   ],
   "schools": [
     {
-      "id": 1,
-      "name": "Fpoly",
-      "time_start": "1/1/2021",
-      "time_end": "2/2/2021",
-      "achievement": "Good"
+      "id": 2,
+      "name": "Vũ Phương Nam",
+      "time_start": "2022-04-28",
+      "time_end": "2022-04-06",
+      "achievement": "234fdf"
     }
   ]
 }

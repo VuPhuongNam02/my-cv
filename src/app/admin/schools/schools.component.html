@@ -1,1 +1,56 @@
-<p>schools works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form [formGroup]="schoolForm" (submit)="submit(schoolForm.value)">
+                <p>
+                    <input type="text" hidden formControlName="id" [(ngModel)]="school.id" class="form-control" />
+                </p>
+                <p>
+                    <label>Name</label>
+                    <input type="text" formControlName="name" [(ngModel)]="school.name" class="form-control" />
+                </p>
+                <p>
+                    <label>time_start</label>
+                    <input type="date" formControlName="time_start" [(ngModel)]="school.time_start" class="form-control" />
+                </p>
+                <p>
+                    <label>time_end</label>
+                    <input type="date" formControlName="time_end" [(ngModel)]="school.time_end" class="form-control" />
+                </p>
+                <p>
+                    <label>achievement</label>
+                    <input type="text" formControlName="achievement" [(ngModel)]="school.achievement" class="form-control" />
+                </p>
+                <button class="btn btn-success" [disabled]="schoolForm.invalid">
+          {{ isEdit ? "Update school" : " Add school" }}
+        </button>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table class="table table-light">
+                <thead>
+                    <th>Name</th>
+                    <th>time_start</th>
+                    <th>time_end</th>
+                    <th>achievement</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of schools">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.time_start }}</td>
+                        <td>{{ item.time_end }}</td>
+                        <td>{{ item.achievement }}</td>
+                        <td>
+                            <button class="btn btn-warning" (click)="edit(item.id)">
+                edit
+              </button>
+                            <button class="btn btn-danger" (click)="delete(item.id)">
+                delete
+              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
