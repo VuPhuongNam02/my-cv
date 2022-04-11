@@ -17,6 +17,7 @@ import { SchoolsService } from './service/schools/schools.service';
 import { ProjectService } from './service/projects/project.service';
 import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TableListComponent } from './components/table-list/table-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     SchoolsComponent,
     MainComponent,
-    ProfileComponentComponent
+    ProfileComponentComponent,
+    TableListComponent,
   ],
   imports: [
     BrowserModule,

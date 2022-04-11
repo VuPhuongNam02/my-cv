@@ -13,7 +13,14 @@
     {
       "id": 1,
       "name": "JavaScript",
-      "avatar": "https://avatars.githubusercontent.com/u/88828699?v=4"
+      "point": 80,
+      "image": "https://avatars.githubusercontent.com/u/88828699?v=4"
+    },
+    {
+      "id": 2,
+      "name": "PHP",
+      "point": 90,
+      "image": "http://localhost:4200/admin/skills"
     }
   ],
   "projects": [
@@ -30,7 +37,8 @@
       "id": 1,
       "name": "Fpoly",
       "time_start": "1/1/2021",
-      "time_end": "2/2/2021"
+      "time_end": "2/2/2021",
+      "achievement": "Good"
     }
   ]
 }

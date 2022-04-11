@@ -1,1 +1,50 @@
-<p>skills works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form [formGroup]="skillForm" (submit)="submit(skillForm.value)">
+                <p>
+                    <input type="text" hidden formControlName="id" [(ngModel)]="skill.id" class="form-control" />
+                </p>
+                <p>
+                    <label>Name</label>
+                    <input type="text" formControlName="name" [(ngModel)]="skill.name" class="form-control" />
+                </p>
+                <p>
+                    <label>Point</label>
+                    <input type="number" formControlName="point" [(ngModel)]="skill.point" class="form-control" />
+                </p>
+                <p>
+                    <label>Image</label>
+                    <input type="text" formControlName="image" [(ngModel)]="skill.image" class="form-control" />
+                </p>
+                <button class="btn btn-success" [disabled]="skillForm.invalid">
+          {{ isEdit ? "Update skill" : " Add skill" }}
+        </button>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table class="table table-light">
+                <thead>
+                    <th>Name</th>
+                    <th>Point</th>
+                    <th>Image</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of skills">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.point / 100 }}</td>
+                        <td><img [src]="item.image" width="200" /></td>
+                        <td>
+                            <button class="btn btn-warning" (click)="edit(item.id)">
+                edit
+              </button>
+                            <button class="btn btn-danger" (click)="delete(item.id)">
+                delete
+              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
