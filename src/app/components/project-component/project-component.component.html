@@ -1,0 +1,14 @@
+<div class="work-item" *ngFor="let item of projects">
+    <div class="date"></div>
+    <div class="content">
+        <div class="dot"></div>
+        <div class="name">{{ item.name }}</div>
+        <div class="company">
+            {{ "From: " + item.time_start }}
+        </div>
+        <div class="company">{{ "To: " + item.time_end }}</div>
+        <div class="desc">
+            {{ item.description }}
+        </div>
+    </div>
+</div>

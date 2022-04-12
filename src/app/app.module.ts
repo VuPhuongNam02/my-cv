@@ -17,7 +17,9 @@ import { SchoolsService } from './service/schools/schools.service';
 import { ProjectService } from './service/projects/project.service';
 import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TableListComponent } from './components/table-list/table-list.component';
+import { ProjectComponentComponent } from './components/project-component/project-component.component';
+import { SchoolComponentComponent } from './components/school-component/school-component.component';
+import { SkillComponentComponent } from './components/skill-component/skill-component.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { TableListComponent } from './components/table-list/table-list.component
     SchoolsComponent,
     MainComponent,
     ProfileComponentComponent,
-    TableListComponent,
+    ProjectComponentComponent,
+    SchoolComponentComponent,
+    SkillComponentComponent,
   ],
   imports: [
     BrowserModule,

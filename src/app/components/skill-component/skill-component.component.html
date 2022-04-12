@@ -1,0 +1,6 @@
+<div class="item" *ngFor="let item of skills">
+    <div class="name">{{ item.name + "-" + item.point + "%" }}</div>
+    <div class="progress">
+        <span class="bar" [ngStyle]="{ width: item.point + '%' }"></span>
+    </div>
+</div>
